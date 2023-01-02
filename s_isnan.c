@@ -1,34 +1,3 @@
-
-/* @(#)s_isnan.c 1.3 95/01/18 */
-/*
- * ====================================================
- * Copyright (C) 1993 by Sun Microsystems, Inc. All rights reserved.
- *
- * Developed at SunSoft, a Sun Microsystems, Inc. business.
- * Permission to use, copy, modify, and distribute this
- * software is freely granted, provided that this notice 
- * is preserved.
- * ====================================================
- */
-
-/*
- * ieee_isnan(x) returns 1 is x is nan, else 0;
- * no branching!
- */
-
-#include "fdlibm.h"
-
-#ifdef __STDC__
-	int ieee_isnan(double x)
-#else
-	int ieee_isnan(x)
-	double x;
-#endif
-{
-	int hx,lx;
-	hx = (__HI(x)&0x7fffffff);
-	lx = __LO(x);
-	hx |= (unsigned)(lx|(-lx))>>31;	
-	hx = 0x7ff00000 - hx;
-	return ((unsigned)(hx))>>31;
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:a7549c673a4648bdbb6c743439815f1aa09431fd59c28a940fa4f04fce1b0af4
+size 742

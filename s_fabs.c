@@ -1,29 +1,3 @@
-
-/* @(#)s_fabs.c 1.3 95/01/18 */
-/*
- * ====================================================
- * Copyright (C) 1993 by Sun Microsystems, Inc. All rights reserved.
- *
- * Developed at SunSoft, a Sun Microsystems, Inc. business.
- * Permission to use, copy, modify, and distribute this
- * software is freely granted, provided that this notice 
- * is preserved.
- * ====================================================
- */
-
-/*
- * ieee_fabs(x) returns the absolute value of x.
- */
-
-#include "fdlibm.h"
-
-#ifdef __STDC__
-	double ieee_fabs(double x)
-#else
-	double ieee_fabs(x)
-	double x;
-#endif
-{
-	__HI(x) &= 0x7fffffff;
-        return x;
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:0f5d038756e906076c784a30e89e8b6e3831653b2a69ad4de750dee02c51e810
+size 629

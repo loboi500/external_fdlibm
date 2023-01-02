@@ -1,28 +1,3 @@
-
-/* @(#)s_ldexp.c 1.3 95/01/18 */
-/*
- * ====================================================
- * Copyright (C) 1993 by Sun Microsystems, Inc. All rights reserved.
- *
- * Developed at SunSoft, a Sun Microsystems, Inc. business.
- * Permission to use, copy, modify, and distribute this
- * software is freely granted, provided that this notice 
- * is preserved.
- * ====================================================
- */
-
-#include "fdlibm.h"
-#include <errno.h>
-
-#ifdef __STDC__
-	double ieee_ldexp(double value, int exp)
-#else
-	double ieee_ldexp(value, exp)
-	double value; int exp;
-#endif
-{
-	if(!ieee_finite(value)||value==0.0) return value;
-	value = ieee_scalbn(value,exp);
-	if(!ieee_finite(value)||value==0.0) errno = ERANGE;
-	return value;
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:82338b9f3f3c5dadc3726a34e21ff80ee5e37814c33dd448f8ba0cacd3595cdc
+size 739

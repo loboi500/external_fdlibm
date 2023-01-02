@@ -1,26 +1,3 @@
-
-/* @(#)s_matherr.c 1.3 95/01/18 */
-/*
- * ====================================================
- * Copyright (C) 1993 by Sun Microsystems, Inc. All rights reserved.
- *
- * Developed at SunSoft, a Sun Microsystems, Inc. business.
- * Permission to use, copy, modify, and distribute this
- * software is freely granted, provided that this notice 
- * is preserved.
- * ====================================================
- */
-
-#include "fdlibm.h"
-
-#ifdef __STDC__
-	int ieee_matherr(struct exception *x)
-#else
-	int ieee_matherr(x)
-	struct exception *x;
-#endif
-{
-	int n=0;
-	if(x->arg1!=x->arg1) return 0;
-	return n;
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:cc9356ef9c26cd6df67237da6d51e29d02a8f0d6c63c6588dfe7acbe2676617e
+size 608

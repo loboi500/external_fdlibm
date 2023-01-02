@@ -1,31 +1,3 @@
-
-/* @(#)s_copysign.c 1.3 95/01/18 */
-/*
- * ====================================================
- * Copyright (C) 1993 by Sun Microsystems, Inc. All rights reserved.
- *
- * Developed at SunSoft, a Sun Microsystems, Inc. business.
- * Permission to use, copy, modify, and distribute this
- * software is freely granted, provided that this notice 
- * is preserved.
- * ====================================================
- */
-
-/*
- * ieee_copysign(double x, double y)
- * ieee_copysign(x,y) returns a value with the magnitude of x and
- * with the sign bit of y.
- */
-
-#include "fdlibm.h"
-
-#ifdef __STDC__
-	double ieee_copysign(double x, double y)
-#else
-	double ieee_copysign(x,y)
-	double x,y;
-#endif
-{
-	__HI(x) = (__HI(x)&0x7fffffff)|(__HI(y)&0x80000000);
-        return x;
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:786b511777fc80fa896abb023d220f4b4891af2feaf63d8589ce49e026e25f05
+size 766
